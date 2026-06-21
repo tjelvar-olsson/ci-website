@@ -1,0 +1,87 @@
+<svg viewBox="0 0 480 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Database cylinder -->
+  <rect x="200" y="51" width="80" height="44" fill="#ea9d34" fill-opacity="0.07"/>
+  <line x1="200" y1="51" x2="200" y2="95" stroke="#ea9d34" stroke-width="1.5"/>
+  <line x1="280" y1="51" x2="280" y2="95" stroke="#ea9d34" stroke-width="1.5"/>
+  <!-- Bottom ellipse drawn first so top overlaps it -->
+  <ellipse cx="240" cy="95" rx="40" ry="10"
+           fill="#ea9d34" fill-opacity="0.07" stroke="#ea9d34" stroke-width="1.5"/>
+  <!-- Top ellipse -->
+  <ellipse cx="240" cy="51" rx="40" ry="10"
+           fill="#ea9d34" fill-opacity="0.18" stroke="#ea9d34" stroke-width="1.5"/>
+  <!-- Body stripe lines -->
+  <line x1="200" y1="65" x2="280" y2="65" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.35"/>
+  <line x1="200" y1="79" x2="280" y2="79" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.35"/>
+
+  <!-- Trunk -->
+  <line x1="240" y1="105" x2="240" y2="135" stroke="#ea9d34" stroke-width="1.5"/>
+
+  <!-- Horizontal branch bar -->
+  <line x1="95" y1="135" x2="385" y2="135" stroke="#ea9d34" stroke-width="1.5"/>
+
+  <!-- Junction dots + vertical drops -->
+  <circle cx="95"  cy="135" r="4" fill="#ea9d34"/>
+  <circle cx="240" cy="135" r="4" fill="#ea9d34"/>
+  <circle cx="385" cy="135" r="4" fill="#ea9d34"/>
+  <line x1="95"  y1="135" x2="95"  y2="159" stroke="#ea9d34" stroke-width="1.5"/>
+  <line x1="240" y1="135" x2="240" y2="159" stroke="#ea9d34" stroke-width="1.5"/>
+  <line x1="385" y1="135" x2="385" y2="159" stroke="#ea9d34" stroke-width="1.5"/>
+
+  <!-- ── Table 1 (cx=95, x=50) ── -->
+  <rect x="50" y="159" width="90" height="100" rx="3" fill="#ea9d34" fill-opacity="0.06" stroke="#ea9d34" stroke-width="1.5"/>
+  <rect x="50" y="159" width="90" height="20"  rx="3" fill="#ea9d34" fill-opacity="0.18"/>
+  <line x1="50" y1="179" x2="140" y2="179" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <line x1="50" y1="199" x2="140" y2="199" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <line x1="50" y1="219" x2="140" y2="219" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <line x1="50" y1="239" x2="140" y2="239" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <line x1="95" y1="179" x2="95"  y2="259" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <!-- Left column data indicators -->
+  <rect x="56" y="183" width="28" height="4" rx="1" fill="#ea9d34" fill-opacity="0.30"/>
+  <rect x="56" y="203" width="22" height="4" rx="1" fill="#ea9d34" fill-opacity="0.25"/>
+  <rect x="56" y="223" width="26" height="4" rx="1" fill="#ea9d34" fill-opacity="0.30"/>
+  <rect x="56" y="243" width="20" height="4" rx="1" fill="#ea9d34" fill-opacity="0.25"/>
+  <!-- Right column data indicators -->
+  <rect x="101" y="183" width="24" height="4" rx="1" fill="#ea9d34" fill-opacity="0.25"/>
+  <rect x="101" y="203" width="28" height="4" rx="1" fill="#ea9d34" fill-opacity="0.30"/>
+  <rect x="101" y="223" width="20" height="4" rx="1" fill="#ea9d34" fill-opacity="0.25"/>
+  <rect x="101" y="243" width="24" height="4" rx="1" fill="#ea9d34" fill-opacity="0.30"/>
+  <!-- Header key chip (Rose accent) -->
+  <rect x="56" y="165" width="12" height="7" rx="1" fill="#d7827a" fill-opacity="0.65"/>
+
+  <!-- ── Table 2 (cx=240, x=195) ── -->
+  <rect x="195" y="159" width="90" height="100" rx="3" fill="#ea9d34" fill-opacity="0.06" stroke="#ea9d34" stroke-width="1.5"/>
+  <rect x="195" y="159" width="90" height="20"  rx="3" fill="#ea9d34" fill-opacity="0.18"/>
+  <line x1="195" y1="179" x2="285" y2="179" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <line x1="195" y1="199" x2="285" y2="199" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <line x1="195" y1="219" x2="285" y2="219" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <line x1="195" y1="239" x2="285" y2="239" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <line x1="240" y1="179" x2="240" y2="259" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <rect x="201" y="183" width="28" height="4" rx="1" fill="#ea9d34" fill-opacity="0.30"/>
+  <rect x="201" y="203" width="22" height="4" rx="1" fill="#ea9d34" fill-opacity="0.25"/>
+  <rect x="201" y="223" width="26" height="4" rx="1" fill="#ea9d34" fill-opacity="0.30"/>
+  <rect x="201" y="243" width="20" height="4" rx="1" fill="#ea9d34" fill-opacity="0.25"/>
+  <rect x="246" y="183" width="24" height="4" rx="1" fill="#ea9d34" fill-opacity="0.25"/>
+  <rect x="246" y="203" width="28" height="4" rx="1" fill="#ea9d34" fill-opacity="0.30"/>
+  <rect x="246" y="223" width="20" height="4" rx="1" fill="#ea9d34" fill-opacity="0.25"/>
+  <rect x="246" y="243" width="24" height="4" rx="1" fill="#ea9d34" fill-opacity="0.30"/>
+  <rect x="201" y="165" width="12" height="7" rx="1" fill="#d7827a" fill-opacity="0.65"/>
+
+  <!-- ── Table 3 (cx=385, x=340) ── -->
+  <rect x="340" y="159" width="90" height="100" rx="3" fill="#ea9d34" fill-opacity="0.06" stroke="#ea9d34" stroke-width="1.5"/>
+  <rect x="340" y="159" width="90" height="20"  rx="3" fill="#ea9d34" fill-opacity="0.18"/>
+  <line x1="340" y1="179" x2="430" y2="179" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <line x1="340" y1="199" x2="430" y2="199" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <line x1="340" y1="219" x2="430" y2="219" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <line x1="340" y1="239" x2="430" y2="239" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <line x1="385" y1="179" x2="385" y2="259" stroke="#ea9d34" stroke-width="0.75" stroke-opacity="0.4"/>
+  <rect x="346" y="183" width="28" height="4" rx="1" fill="#ea9d34" fill-opacity="0.30"/>
+  <rect x="346" y="203" width="22" height="4" rx="1" fill="#ea9d34" fill-opacity="0.25"/>
+  <rect x="346" y="223" width="26" height="4" rx="1" fill="#ea9d34" fill-opacity="0.30"/>
+  <rect x="346" y="243" width="20" height="4" rx="1" fill="#ea9d34" fill-opacity="0.25"/>
+  <rect x="391" y="183" width="24" height="4" rx="1" fill="#ea9d34" fill-opacity="0.25"/>
+  <rect x="391" y="203" width="28" height="4" rx="1" fill="#ea9d34" fill-opacity="0.30"/>
+  <rect x="391" y="223" width="20" height="4" rx="1" fill="#ea9d34" fill-opacity="0.25"/>
+  <rect x="391" y="243" width="24" height="4" rx="1" fill="#ea9d34" fill-opacity="0.30"/>
+  <rect x="346" y="165" width="12" height="7" rx="1" fill="#d7827a" fill-opacity="0.65"/>
+</svg>

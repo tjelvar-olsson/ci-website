@@ -1,0 +1,289 @@
+# content.yaml
+# All copy for cyborginterfaces.com, keyed by section.field
+# Edit here, then share the file — I know where each block maps in index-mesh.html
+#
+# [FLAG] marks claims that need verifying before the site goes live
+
+meta:
+  title: "Cyborg Interfaces — Tjelvar Olsson"
+  description: >
+    Scientific computing for companies whose core business is science.
+    I help you build systems that scale, manage your data properly, and
+    keep critical technical knowledge out of just one person's head.
+
+nav:
+  cta: "Get in touch"
+
+hero:
+  heading: "Scientific computing for companies where the science and the engineering have to understand each other."
+  sub: >
+    I'm Tjelvar Olsson. I work with companies whose core business is science
+    — helping them build computing systems that scale, manage their data
+    properly, and make sure critical technical knowledge doesn't live in just
+    one person's head.
+  cta_primary: "Get in touch"
+  cta_call: "Book a call"
+  cta_linkedin: "LinkedIn"
+
+intersection:
+  label: "The intersection"
+  heading: "Why the intersection matters"
+  body: >
+    The value is in the combination. Without understanding the science,
+    it's hard to know what shape the computing needs to take. Without
+    understanding the computing, it's hard to know how analysis can be
+    restructured to run more efficiently. Most specialists are strong on
+    one side. I work at both.
+  computing:
+    label: "Computing"
+    body: >
+      HPC platforms, workflow orchestration, cloud pipelines. Production-grade
+      from the start, not just working on your machine.
+  science:
+    label: "Science"
+    body: >
+      Biochemistry PhD from UCL. I read the methods section,
+      not just the spec.
+  people:
+    label: "People"
+    body: >
+      Every engagement is built around knowledge transfer and documentation
+      — so systems run without me once the work is done.
+
+services:
+  label: "Services"
+  heading: "Three areas where I have a track record"
+  sub: >
+    I've done this work from the inside of scientific organisations
+    — at research institutes, and now independently.
+
+  pillar_1:
+    number: "01"
+    title: "Computing that scales with the science"
+    body_1: >
+      Your setup made sense when you started. Since then the data has grown,
+      the team has changed, and what worked at the beginning is starting to creak.
+      Jobs take longer than they should. Pipelines break when something changes.
+      The knowledge of how it all fits together lives in one or two people's heads.
+    body_2: >
+      I come in, learn the system and the science behind it, and help you build
+      something that scales. That sometimes means simplifying. It sometimes means
+      accepting that scientific computing genuinely needs a certain amount of
+      complexity — but it should be the right complexity, not the kind that's just
+      accumulated over time.
+    # restored third sentence from the markdown
+    note: >
+      This is embedded work. I'm with you for months, not days.
+      When a project calls for expertise beyond mine, I bring in
+      specialists from my network.
+
+  pillar_2:
+    number: "02"
+    title: "Data that makes sense"
+    body_1: >
+      Scientific data is only useful if you can find it, trust it, and hand
+      it to someone else without a long explanation of the folder structure.
+    # restored: "Data management is something I've thought about seriously
+    # for a long time." — the sentence that earns "Small, but real."
+    body_2: >
+      I built dtool — an open-source tool for managing scientific datasets.
+      It's been adopted by a group in Germany, and one of their researchers
+      is now introducing it to a group in Japan. Small, but real.
+      Data management is something I've thought about seriously for a long time.
+    # restored: bidirectional translation — both directions, not just one
+    body_3: >
+      I've also spent time as the person sitting between research teams and
+      central computing infrastructure — writing the scientific case for
+      hardware investment, translating what the science needs into something
+      the engineers can act on, and translating what the engineering can do
+      back to the scientists.
+
+  pillar_3:
+    number: "03"
+    title: "From raw data to answers"
+    # restored: "The question is usually specific." — tells the client
+    # Tjelvar understands they have a precise question, not a vague one
+    body_1: >
+      You have image or video data — cells, organisms, agricultural samples,
+      materials — and you need to know what's in it. The question is usually
+      specific. The challenge is usually the pipeline: getting from raw data
+      to a reproducible answer that doesn't require starting from scratch
+      every time.
+    body_2: >
+      I scope these as fixed projects. A short feasibility phase first, so you
+      know what you're getting into before committing. Two days of knowledge
+      transfer included, so the capability stays with you when the project ends.
+    note: "Most projects fall between £4,000 and £8,000."
+
+how_i_work:
+  label: "Process"
+  heading: "How I work"
+  # new key — the opening line from the markdown that was missing entirely
+  intro: >
+    I'm a consultant, not an employee. My contracts are scoped accordingly.
+
+  fixed_scope:
+    title: "Fixed scope or embedded"
+    body: >
+      For data analysis work, I work to a fixed scope with a defined output.
+      For infrastructure work, I work embedded — usually over several months.
+      The contract shape follows the work, not the other way around.
+
+  network:
+    title: "Specialist network"
+    body: >
+      I don't know everything. When a project calls for expertise I don't have,
+      I bring in people from my network who go deeper in the areas that matter.
+      You'll know when I'm doing that.
+
+  knowledge_transfer:
+    title: "Knowledge transfer as standard"
+    # restored: "and systems that don't depend on me to keep running."
+    # — the clause that closes the loop was cut in the yaml version
+    body: >
+      The goal, especially for embedded work, is to leave things in better
+      shape than I found them — properly documented, with onboarding that
+      makes sense to the next person, and systems that don't depend on me
+      to keep running.
+
+  no_dependency:
+    title: "Systems that don't depend on me"
+    body: >
+      The work should stand up when I'm not around. That means documentation,
+      knowledge transfer, and systems whose logic doesn't live only in my head.
+
+testimonials:
+  label: "What clients say"
+  heading: "I've worked with some good people over the years. Here's what a few of them said."
+
+  items:
+    # confirmed real — recently obtained from Alicia Showering, BugBiome
+    - quote: >
+        Tjelvar understood our biology as well as the software. He built
+        analysis tools we can run and maintain ourselves. Everything was
+        scripted, reproducible, and properly documented — that matters
+        when the team needs to keep using it without him in the room.
+      name: "Alicia Showering"
+      role: "CEO & Co-founder, BugBiome"
+
+    # [FLAG] permission given for the old image analysis page — recommend
+    # a brief message confirming they are happy with use on this
+    # differently-positioned site before publishing
+    - quote: >
+        Tjelvar has experience in working with people from a variety of
+        backgrounds, which helps him to quickly understand the core data
+        management requirements when approaching him. I recommend him
+        very highly.
+      name: "Prof Lars Pastewka"
+      role: "Group Leader, University of Freiburg"
+
+    # [FLAG] same re-permission note as above
+    - quote: >
+        Tjelvar is friendly, very capable and dependable. He has an
+        excellent understanding of the demands of biologists and has
+        helped me and my lab members on numerous occasions with finding
+        creative solutions to safely store and retrieve our data
+        cost-efficiently.
+      name: "Dr Brande Wulff"
+      role: "Group Leader, John Innes Centre"
+
+about:
+  label: "About"
+  name: "Tjelvar Olsson, PhD"
+  role: "Scientific computing — bridging science and engineering"
+
+  bio_1: >
+    I have a PhD in biochemistry from UCL, and I've spent the years since
+    moving toward the computing side of scientific work — not because the
+    science stopped mattering, but because the computing is where a lot of
+    scientific work gets stuck.
+
+  bio_2: >
+    The combination turns out to be useful. Without understanding the science,
+    it's hard to know what shape the computing needs to take. Without
+    understanding the computing, it's hard to know how analysis can be
+    restructured to run more efficiently.
+
+  # restored: "Small, but real." after dtool description; restored dash
+  # construction for the book sentence; honest dtool reach (Germany + Japan)
+  # bio_3 contains an <a> tag; template renders it with | safe
+  bio_3: >-
+    I built dtool, a data management tool for scientific datasets — adopted
+    by a group in Germany, and one of their researchers is now introducing
+    it to a group in Japan. Small, but real. I wrote
+    <a href="http://book.biologistsguide2computing.com/" target="_blank" rel="noopener">A Biologist's Guide to Computing</a>
+    — freely available, and found by more than 400 people through the mailing
+    list alone, with many more arriving via links I've long since lost track of.
+    Some of the code has aged badly. The chapters on how to think computationally
+    haven't.
+
+  bio_4: >
+    I spent time at the John Innes Centre as the interface between the research
+    teams and the central computing infrastructure — the person who could explain
+    what the science needed to the engineers, and explain what the engineering
+    could offer back to the scientists. That's more or less what I still do,
+    just independently.
+
+  bio_5: >
+    I work with a small number of clients at a time. If your company's core work
+    is science and your computing needs to grow up, I'd like to hear about it.
+
+depth_signals:
+  label: "Background"
+  heading: "Research from the inside"
+  sub: >
+    I've been a researcher, an author, and an engineer.
+    That breadth is the product, not an accident.
+
+  published:
+    title: "Published researcher"
+    # [FLAG] verify publication count and journal names against your
+    # Google Scholar profile before publishing; also confirm the URL below
+    body: >
+      Peer-reviewed publications spanning computational biology and
+      scientific software. I understand what reproducibility means in
+      practice because I've been on both sides of a failed replication.
+    link_text: "Google Scholar profile →"
+    link_url: "https://scholar.google.com/citations?user=C6zQlvoAAAAJ&hl=en"
+
+  author:
+    title: "Author"
+    # improved: "not to dumb it down" was clunky; this captures the
+    # spirit of the book (relatable and written to be read, not tolerated)
+    body: >
+      I wrote A Biologist's Guide to Computing — available free online.
+      Written to be genuinely readable for biologists: the goal was always
+      that it would be picked up and finished, not just bookmarked.
+    link_text: "Read the book →"
+    # [FLAG] confirm this URL is correct
+    link_url: "http://book.biologistsguide2computing.com/"
+
+  knowledge_transfer:
+    title: "Knowledge transfer"
+    # reordered: leads with KT (the principle), then mentions courses
+    # as evidence — per the interview, teaching is evidence of KT,
+    # not the other way around
+    body: >
+      Knowledge transfer is built into every project I deliver —
+      documentation, onboarding, and time spent making sure the work
+      sticks once I'm gone. I've also run training courses in Python,
+      Linux, and HPC for researchers at the John Innes Centre.
+      Getting the work to stick is part of the work.
+
+  eu:
+    title: "EU Horizon participant"
+    # [FLAG] "Registered EU Horizon PIC holder" was not verified in our
+    # session — restore it here if accurate, otherwise the current
+    # wording is the safer claim
+    body: >
+      Named as data management partner on an active EU Horizon project.
+      I understand the data management and governance expectations that
+      come with European research funding.
+
+contact:
+  label: "Contact"
+  heading: "Get in touch"
+  sub: "The best starting point is usually a short conversation."
+  cta_email: "Email me"
+  cta_call: "Book a call"
+  cta_linkedin: "LinkedIn"

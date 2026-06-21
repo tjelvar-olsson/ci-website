@@ -1,0 +1,59 @@
+<svg viewBox="0 0 480 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="wfp" viewBox="0 0 10 7" refX="9" refY="3.5"
+            markerWidth="7" markerHeight="5" orient="auto">
+      <polygon points="0,0 10,3.5 0,7" fill="#286983"/>
+    </marker>
+    <marker id="wff" viewBox="0 0 10 7" refX="9" refY="3.5"
+            markerWidth="7" markerHeight="5" orient="auto">
+      <polygon points="0,0 10,3.5 0,7" fill="#56949f"/>
+    </marker>
+  </defs>
+
+  <!-- Source node — three concentric rings -->
+  <circle cx="72" cy="150" r="30" fill="#286983" fill-opacity="0.08" stroke="#286983" stroke-width="1.5"/>
+  <circle cx="72" cy="150" r="17" fill="#286983" fill-opacity="0.12" stroke="#286983" stroke-width="1"/>
+  <circle cx="72" cy="150" r="6"  fill="#286983"/>
+
+  <!-- Process A (upper) -->
+  <circle cx="220" cy="88" r="26" fill="#286983" fill-opacity="0.07" stroke="#286983" stroke-width="1.5"/>
+  <circle cx="220" cy="88" r="13" fill="#56949f" fill-opacity="0.12" stroke="#56949f" stroke-width="1"/>
+  <circle cx="220" cy="88" r="5"  fill="#56949f"/>
+
+  <!-- Process B (lower) -->
+  <circle cx="220" cy="212" r="26" fill="#286983" fill-opacity="0.07" stroke="#286983" stroke-width="1.5"/>
+  <circle cx="220" cy="212" r="13" fill="#56949f" fill-opacity="0.12" stroke="#56949f" stroke-width="1"/>
+  <circle cx="220" cy="212" r="5"  fill="#56949f"/>
+
+  <!-- Hub node — three rings -->
+  <circle cx="350" cy="150" r="38" fill="#286983" fill-opacity="0.07" stroke="#286983" stroke-width="2"/>
+  <circle cx="350" cy="150" r="23" fill="#286983" fill-opacity="0.11" stroke="#286983" stroke-width="1.5"/>
+  <circle cx="350" cy="150" r="10" fill="#286983"/>
+
+  <!-- Output node -->
+  <circle cx="435" cy="150" r="18" fill="#56949f" fill-opacity="0.12" stroke="#56949f" stroke-width="1.5"/>
+  <circle cx="435" cy="150" r="7"  fill="#56949f"/>
+
+  <!-- Source → Process A -->
+  <path d="M 100 138 C 145 120 175 105 196 97"
+        stroke="#286983" stroke-width="1.5" marker-end="url(#wfp)"/>
+  <!-- Source → Process B -->
+  <path d="M 100 162 C 145 180 175 195 196 203"
+        stroke="#286983" stroke-width="1.5" marker-end="url(#wfp)"/>
+  <!-- Process A → Hub -->
+  <path d="M 244 99 C 279 116 308 130 315 136"
+        stroke="#56949f" stroke-width="1.5" marker-end="url(#wff)"/>
+  <!-- Process B → Hub -->
+  <path d="M 244 201 C 279 184 308 170 315 164"
+        stroke="#56949f" stroke-width="1.5" marker-end="url(#wff)"/>
+  <!-- Hub → Output -->
+  <line x1="388" y1="150" x2="419" y2="150"
+        stroke="#286983" stroke-width="1.5" marker-end="url(#wfp)"/>
+
+  <!-- Flow-indicator dots -->
+  <circle cx="152" cy="127" r="2.5" fill="#286983" fill-opacity="0.45"/>
+  <circle cx="152" cy="173" r="2.5" fill="#286983" fill-opacity="0.45"/>
+  <circle cx="284" cy="116" r="2.5" fill="#56949f" fill-opacity="0.55"/>
+  <circle cx="284" cy="184" r="2.5" fill="#56949f" fill-opacity="0.55"/>
+  <circle cx="402" cy="150" r="2.5" fill="#286983" fill-opacity="0.45"/>
+</svg>

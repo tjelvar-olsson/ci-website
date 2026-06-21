@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ c.meta.title }}</title>
+  <meta name="description" content="{{ c.meta.description | trim }}">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.ico" sizes="32x32"><!-- ICO fallback for browsers that request /favicon.ico -->
+
+  <!-- Gradient mesh hero styles -->
+  <style>
+    /* ── Blobs ─────────────────────────────────────────────── */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.22;
+      pointer-events: none;
+      will-change: transform;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .blob { opacity: 0.48; filter: blur(90px); }
+    }
+
+    .blob-pine {
+      width: 700px; height: 600px;
+      top: -140px; left: -180px;
+      background: radial-gradient(circle at center, #31748f 0%, transparent 68%);
+      animation: blob-pine 22s ease-in-out infinite;
+    }
+    .blob-gold {
+      width: 600px; height: 560px;
+      top: -80px; right: -140px;
+      background: radial-gradient(circle at center, #ea9d34 0%, transparent 68%);
+      animation: blob-gold 28s ease-in-out infinite;
+    }
+    .blob-iris {
+      width: 660px; height: 600px;
+      bottom: -120px; left: 60px;
+      background: radial-gradient(circle at center, #c4a7e7 0%, transparent 68%);
+      animation: blob-iris 19s ease-in-out infinite;
+    }
+    .blob-foam {
+      width: 500px; height: 460px;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle at center, #9ccfd8 0%, transparent 68%);
+      animation: blob-foam 15s ease-in-out infinite;
+    }
+    .blob-love {
+      width: 560px; height: 500px;
+      bottom: -100px; right: -80px;
+      background: radial-gradient(circle at center, #eb6f92 0%, transparent 68%);
+      animation: blob-love 32s ease-in-out infinite;
+    }
+
+    @keyframes blob-pine {
+      0%,100% { transform: translate(  0%,   0%); }
+      25%      { transform: translate( 18%,  22%); }
+      50%      { transform: translate( 38%,   8%); }
+      75%      { transform: translate( 12%,  32%); }
+    }
+    @keyframes blob-gold {
+      0%,100% { transform: translate(  0%,   0%); }
+      33%      { transform: translate(-22%,  28%); }
+      66%      { transform: translate(  8%,  42%); }
+    }
+    @keyframes blob-iris {
+      0%,100% { transform: translate(  0%,   0%); }
+      30%      { transform: translate( 20%, -18%); }
+      60%      { transform: translate( 40%, -30%); }
+      80%      { transform: translate( 10%, -10%); }
+    }
+    @keyframes blob-foam {
+      0%,100% { transform: translate(-50%, -50%); }
+      20%      { transform: translate(-32%, -62%); }
+      40%      { transform: translate(-58%, -40%); }
+      60%      { transform: translate(-44%, -66%); }
+      80%      { transform: translate(-62%, -52%); }
+    }
+    @keyframes blob-love {
+      0%,100% { transform: translate(  0%,   0%); }
+      35%      { transform: translate(-28%, -12%); }
+      65%      { transform: translate(-10%, -38%); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .blob { animation: none; }
+    }
+
+    @media (max-width: 600px) {
+      .blob { filter: blur(60px); }
+      .blob-pine, .blob-gold, .blob-iris,
+      .blob-love { width: 360px; height: 320px; }
+      .blob-foam  { width: 280px; height: 260px; }
+    }
+
+    /* ── Hero layout override: centered, full-height ────────── */
+    .hero--mesh {
+      min-height: 92vh;
+      padding-block: clamp(6rem, 14vw, 10rem);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero--mesh .hero__inner {
+      max-width: 680px;
+      margin-inline: auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero--mesh .hero__heading {
+      font-size: var(--text-3xl);
+    }
+
+    .hero--mesh .hero__sub {
+      margin-inline: auto;
+    }
+
+    .hero--mesh .hero__actions {
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container">
+      <nav class="nav__inner" aria-label="Main navigation">
+
+        <a class="nav__logo" href="#home" aria-label="Cyborg Interfaces — home">
+          <picture>
+            <source srcset="assets/logo-mark-dark.svg" media="(prefers-color-scheme: dark)">
+            <img src="assets/logo-mark-light.svg" alt="" aria-hidden="true" height="36">
+          </picture>
+          <span class="nav__logo-text">Cyborg Interfaces</span>
+        </a>
+
+        <button class="nav__toggle" id="nav-toggle"
+                aria-label="Toggle navigation" aria-expanded="false"
+                aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a class="nav__cta" href="mailto:tjelvar@cyborginterfaces.com">{{ c.nav.cta }}</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── Hero (gradient mesh) ──────────────────────────────── -->
+    <section class="hero hero--mesh" id="home">
+      <div class="blob blob-pine"  aria-hidden="true"></div>
+      <div class="blob blob-gold"  aria-hidden="true"></div>
+      <div class="blob blob-iris"  aria-hidden="true"></div>
+      <div class="blob blob-foam"  aria-hidden="true"></div>
+      <div class="blob blob-love"  aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero__inner">
+          <h1 class="hero__heading">{{ c.hero.heading }}</h1>
+          <p class="hero__sub">{{ c.hero.sub | trim }}</p>
+          <div class="hero__actions">
+            <a href="mailto:tjelvar@cyborginterfaces.com" class="btn btn--primary">{{ c.hero.cta_primary }}</a>
+            <a href="https://calendly.com/tjelvar-olsson/intro-call" class="btn btn--outline">{{ c.hero.cta_call }}</a>
+            <a href="https://www.linkedin.com/in/tjelvarolsson/" class="btn btn--outline">{{ c.hero.cta_linkedin }}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Intersection ───────────────────────────────────────── -->
+    <section class="intersection" id="why">
+      <div class="container">
+        <div class="intersection__layout">
+
+          <div class="venn-wrap" data-reveal>
+            <svg class="venn" viewBox="0 0 380 415"
+                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="180" cy="118" r="108"
+                      fill="var(--iris)" fill-opacity="0.14"
+                      stroke="var(--iris)" stroke-width="1.5" stroke-opacity="0.55"/>
+              <circle cx="110" cy="236" r="108"
+                      fill="var(--pine)" fill-opacity="0.14"
+                      stroke="var(--pine)" stroke-width="1.5" stroke-opacity="0.55"/>
+              <circle cx="250" cy="236" r="108"
+                      fill="var(--foam)" fill-opacity="0.14"
+                      stroke="var(--foam)" stroke-width="1.5" stroke-opacity="0.55"/>
+              <text x="180" y="52" text-anchor="middle"
+                    font-family="DM Sans, system-ui, sans-serif"
+                    font-size="11" font-weight="700" letter-spacing="0.1em"
+                    fill="var(--iris)">PEOPLE</text>
+              <text x="50" y="362" text-anchor="middle"
+                    font-family="DM Sans, system-ui, sans-serif"
+                    font-size="11" font-weight="700" letter-spacing="0.1em"
+                    fill="var(--pine)">COMPUTING</text>
+              <text x="330" y="362" text-anchor="middle"
+                    font-family="DM Sans, system-ui, sans-serif"
+                    font-size="11" font-weight="700" letter-spacing="0.1em"
+                    fill="var(--foam)">SCIENCE</text>
+              <!-- hand-drawn annotation -->
+              <text x="290" y="400" text-anchor="middle"
+                    font-family="Caveat, cursive" font-size="23" font-weight="600"
+                    fill="var(--iris)" opacity="0.8">where I work</text>
+              <!-- arrow shaft: cubic bezier from near the text to the intersection -->
+              <!-- M = start point (near text), C = two control points then end point (intersection tip) -->
+              <path d="M 272,388 C 272,338 242,268 186,212"
+                    fill="none" stroke="var(--iris)" stroke-width="2.2"
+                    stroke-linecap="round" opacity="0.6"/>
+              <!-- arrowhead: single connected stroke, left-wing → tip → right-wing -->
+              <!-- tip is the middle point (186,212) — same as shaft end point above -->
+              <!-- left wing:  first point  (200,228) — adjust x/y to rotate that wing -->
+              <!-- right wing: third point  (172,228) — adjust x/y to rotate that wing -->
+              <path d="M 208,216 L 186,212 L 182,228"
+                    fill="none" stroke="var(--iris)" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+            </svg>
+          </div>
+
+          <div class="intersection__text">
+            <span class="section-label" data-reveal>{{ c.intersection.label }}</span>
+            <h2 class="section-heading" data-reveal data-delay="100">{{ c.intersection.heading }}</h2>
+            <p class="section-sub" data-reveal data-delay="200">{{ c.intersection.body | trim }}</p>
+            <div class="circles-grid" data-reveal data-delay="300">
+              <div class="circle-item">
+                <p class="circle-item__label circle-item__label--computing">{{ c.intersection.computing.label }}</p>
+                <p>{{ c.intersection.computing.body | trim }}</p>
+              </div>
+              <div class="circle-item">
+                <p class="circle-item__label circle-item__label--science">{{ c.intersection.science.label }}</p>
+                <p>{{ c.intersection.science.body | trim }}</p>
+              </div>
+              <div class="circle-item">
+                <p class="circle-item__label circle-item__label--people">{{ c.intersection.people.label }}</p>
+                <p>{{ c.intersection.people.body | trim }}</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Services: pillars ─────────────────────────────────── -->
+    <section class="pillars" id="services">
+      <div class="container">
+        <div class="pillars__intro">
+          <span class="section-label" data-reveal>{{ c.services.label }}</span>
+          <h2 class="section-heading" data-reveal data-delay="100">{{ c.services.heading }}</h2>
+          <p class="section-sub" data-reveal data-delay="200">{{ c.services.sub | trim }}</p>
+        </div>
+
+        <div class="pillars__grid">
+          <div class="pillar-card" data-reveal>
+            <div class="pillar-card__illustration" aria-hidden="true">
+              <img src="images/pillar-workflows.svg" alt="">
+            </div>
+            <p class="pillar-card__number">{{ c.services.pillar_1.number }}</p>
+            <h3 class="pillar-card__title">{{ c.services.pillar_1.title }}</h3>
+            <p class="pillar-card__body">{{ c.services.pillar_1.body_1 | trim }}</p>
+            <p class="pillar-card__body">{{ c.services.pillar_1.body_2 | trim }}</p>
+            <p class="pillar-card__body pillar-card__note">{{ c.services.pillar_1.note | trim }}</p>
+          </div>
+
+          <div class="pillar-card" data-reveal data-delay="100">
+            <div class="pillar-card__illustration" aria-hidden="true">
+              <img src="images/pillar-data.svg" alt="">
+            </div>
+            <p class="pillar-card__number">{{ c.services.pillar_2.number }}</p>
+            <h3 class="pillar-card__title">{{ c.services.pillar_2.title }}</h3>
+            <p class="pillar-card__body">{{ c.services.pillar_2.body_1 | trim }}</p>
+            <p class="pillar-card__body">{{ c.services.pillar_2.body_2 | trim }}</p>
+            <p class="pillar-card__body">{{ c.services.pillar_2.body_3 | trim }}</p>
+          </div>
+
+          <div class="pillar-card" data-reveal data-delay="200">
+            <div class="pillar-card__illustration" aria-hidden="true">
+              <img src="images/pillar-analysis.svg" alt="">
+            </div>
+            <p class="pillar-card__number">{{ c.services.pillar_3.number }}</p>
+            <h3 class="pillar-card__title">{{ c.services.pillar_3.title }}</h3>
+            <p class="pillar-card__body">{{ c.services.pillar_3.body_1 | trim }}</p>
+            <p class="pillar-card__body">{{ c.services.pillar_3.body_2 | trim }}</p>
+            <p class="pillar-card__body pillar-card__note">{{ c.services.pillar_3.note | trim }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── How I work ─────────────────────────────────────────── -->
+    <section class="how-i-work">
+      <div class="container">
+        <span class="section-label" data-reveal>{{ c.how_i_work.label }}</span>
+        <h2 class="section-heading" data-reveal data-delay="100">{{ c.how_i_work.heading }}</h2>
+        <p class="section-sub" data-reveal data-delay="150">{{ c.how_i_work.intro | trim }}</p>
+        <div class="how-i-work__grid">
+          <div class="work-item" data-reveal>
+            <svg class="work-item__icon" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="5" y="3" width="18" height="22" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="5" y1="13" x2="23" y2="13" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="9" y1="8.5" x2="19" y2="8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="9" y1="18" x2="19" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="9" y1="21" x2="15" y2="21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <h3 class="work-item__title">{{ c.how_i_work.fixed_scope.title }}</h3>
+            <p>{{ c.how_i_work.fixed_scope.body | trim }}</p>
+          </div>
+          <div class="work-item" data-reveal data-delay="100">
+            <svg class="work-item__icon" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="14" cy="14" r="3" fill="currentColor"/>
+              <circle cx="5" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="23" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="14" cy="24" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="7" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="21" y1="8" x2="16" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="14" y1="17" x2="14" y2="21.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <h3 class="work-item__title">{{ c.how_i_work.network.title }}</h3>
+            <p>{{ c.how_i_work.network.body | trim }}</p>
+          </div>
+          <div class="work-item" data-reveal data-delay="200">
+            <svg class="work-item__icon" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 7C3 5.9 3.9 5 5 5L13 5L13 22L5 22C3.9 22 3 21.1 3 20Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M15 5L23 5C24.1 5 25 5.9 25 7L25 20C25 21.1 24.1 22 23 22L15 22Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <line x1="14" y1="5" x2="14" y2="22" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="6" y1="10" x2="11" y2="10" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+              <line x1="6" y1="13" x2="11" y2="13" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+              <line x1="17" y1="10" x2="22" y2="10" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+              <line x1="17" y1="13" x2="22" y2="13" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+            </svg>
+            <h3 class="work-item__title">{{ c.how_i_work.knowledge_transfer.title }}</h3>
+            <p>{{ c.how_i_work.knowledge_transfer.body | trim }}</p>
+          </div>
+          <div class="work-item" data-reveal data-delay="300">
+            <svg class="work-item__icon" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M14 3L25 7L25 16C25 21 19.5 24.5 14 26.5C8.5 24.5 3 21 3 16L3 7Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M9.5 14L12.5 17.5L18.5 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3 class="work-item__title">{{ c.how_i_work.no_dependency.title }}</h3>
+            <p>{{ c.how_i_work.no_dependency.body | trim }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Testimonials ───────────────────────────────────────── -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <span class="section-label" data-reveal>{{ c.testimonials.label }}</span>
+        <h2 class="section-heading" data-reveal data-delay="100">{{ c.testimonials.heading }}</h2>
+
+        <div class="testimonials__grid">
+{% for item in c.testimonials['items'] %}
+          <div class="testimonial-card" data-reveal{% if not loop.first %} data-delay="{{ loop.index0 * 100 }}"{% endif %}>
+            <p class="testimonial-card__quote">{{ item.quote | trim }}</p>
+            <div class="testimonial-card__attribution">
+              <strong>{{ item.name }}</strong>
+              <span>{{ item.role }}</span>
+            </div>
+          </div>
+{% endfor %}
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── About ─────────────────────────────────────────────── -->
+    <section class="about-intro" id="about">
+      <div class="container">
+        <div class="about-intro__layout">
+
+          <div class="about-intro__photo-wrap" data-reveal>
+            <img class="about-intro__photo"
+                 src="assets/tjelvar.jpg"
+                 alt="Tjelvar Olsson">
+          </div>
+
+          <div>
+            <span class="section-label" data-reveal>{{ c.about.label }}</span>
+            <h2 class="about-intro__name" data-reveal data-delay="50">{{ c.about.name }}</h2>
+            <p class="about-intro__role" data-reveal data-delay="100">{{ c.about.role }}</p>
+            <div class="about-intro__bio">
+              <p data-reveal data-delay="150">{{ c.about.bio_1 | trim }}</p>
+              <p data-reveal data-delay="200">{{ c.about.bio_2 | trim }}</p>
+              <p data-reveal data-delay="250">{{ c.about.bio_3 | safe }}</p>
+              <p data-reveal data-delay="300">{{ c.about.bio_4 | trim }}</p>
+              <p data-reveal data-delay="350">{{ c.about.bio_5 | trim }}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Depth signals ──────────────────────────────────────── -->
+    <section class="depth-signals">
+      <div class="container">
+        <span class="section-label" data-reveal>{{ c.depth_signals.label }}</span>
+        <h2 class="section-heading" data-reveal data-delay="100">{{ c.depth_signals.heading }}</h2>
+        <p class="section-sub" data-reveal data-delay="200">{{ c.depth_signals.sub | trim }}</p>
+
+        <div class="signals-grid">
+          <div class="signal-item" data-reveal>
+            <h3 class="signal-item__title">{{ c.depth_signals.published.title }}</h3>
+            <p>{{ c.depth_signals.published.body | trim }}</p>
+            <a href="{{ c.depth_signals.published.link_url }}"
+               target="_blank" rel="noopener">{{ c.depth_signals.published.link_text }}</a>
+          </div>
+
+          <div class="signal-item" data-reveal data-delay="100">
+            <h3 class="signal-item__title">{{ c.depth_signals.author.title }}</h3>
+            <p>{{ c.depth_signals.author.body | trim }}</p>
+            <a href="{{ c.depth_signals.author.link_url }}"
+               target="_blank" rel="noopener">{{ c.depth_signals.author.link_text }}</a>
+          </div>
+
+          <div class="signal-item" data-reveal data-delay="200">
+            <h3 class="signal-item__title">{{ c.depth_signals.knowledge_transfer.title }}</h3>
+            <p>{{ c.depth_signals.knowledge_transfer.body | trim }}</p>
+          </div>
+
+          <div class="signal-item" data-reveal data-delay="300">
+            <h3 class="signal-item__title">{{ c.depth_signals.eu.title }}</h3>
+            <p>{{ c.depth_signals.eu.body | trim }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact ────────────────────────────────────────────── -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <span class="section-label" data-reveal>{{ c.contact.label }}</span>
+        <h2 class="section-heading" data-reveal data-delay="100">{{ c.contact.heading }}</h2>
+        <p class="section-sub" data-reveal data-delay="200">{{ c.contact.sub }}</p>
+        <div class="contact-section__actions" data-reveal data-delay="300">
+          <a href="https://calendly.com/tjelvar-olsson/intro-call" class="btn btn--primary">{{ c.contact.cta_call }}</a>
+          <a href="mailto:tjelvar@cyborginterfaces.com" class="btn btn--outline">{{ c.contact.cta_email }}</a>
+          <a href="https://www.linkedin.com/in/tjelvarolsson/" class="btn btn--outline">{{ c.contact.cta_linkedin }}</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <picture>
+            <source srcset="assets/logo-dark.svg" media="(prefers-color-scheme: dark)">
+            <img src="assets/logo-light.svg" alt="Cyborg Interfaces Ltd">
+          </picture>
+        </div>
+        <div class="footer__right">
+          <div class="footer__contact">
+            <a href="mailto:tjelvar@cyborginterfaces.com">tjelvar@cyborginterfaces.com</a>
+            <a href="https://www.linkedin.com/in/tjelvarolsson/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=C6zQlvoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://calendly.com/tjelvar-olsson/intro-call" target="_blank" rel="noopener">Book a call</a>
+          </div>
+          <p class="footer__meta">17-19 St. Georges Street, Norwich, NR3 1AB &nbsp;&middot;&nbsp; &copy; 2026 Cyborg Interfaces Ltd</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <noscript>
+    <style>[data-reveal] { opacity: 1 !important; transform: none !important; }</style>
+  </noscript>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .c   { fill: none; stroke-width: 2; stroke: #286983; }
+    .cf  { fill: #286983; fill-opacity: 0.18; }
+    @media (prefers-color-scheme: dark) {
+      .c   { stroke: #31748f; }
+      .cf  { fill: #31748f; fill-opacity: 0.28; }
+    }
+  </style>
+  <circle class="cf c" cx="16"   cy="11.5" r="8"/>
+  <circle class="cf c" cx="10"   cy="22"   r="8"/>
+  <circle class="cf c" cx="22"   cy="22"   r="8"/>
+</svg>
