@@ -1,8 +1,6 @@
 # content.yaml
 # All copy for cyborginterfaces.com, keyed by section.field
 # Edit here, then share the file — I know where each block maps in index-mesh.html
-#
-# [FLAG] marks claims that need verifying before the site goes live
 
 meta:
   title: "Cyborg Interfaces — Tjelvar Olsson"
@@ -55,7 +53,7 @@ services:
   heading: "Three areas where I have a track record"
   sub: >
     I've done this work from the inside of scientific organisations
-    — at research institutes, and now independently.
+    — at research institutes, in industry and now independently.
 
   pillar_1:
     number: "01"
@@ -237,8 +235,6 @@ depth_signals:
 
   published:
     title: "Published researcher"
-    # [FLAG] verify publication count and journal names against your
-    # Google Scholar profile before publishing; also confirm the URL below
     body: >
       Peer-reviewed publications spanning computational biology and
       scientific software. I understand what reproducibility means in
@@ -248,21 +244,15 @@ depth_signals:
 
   author:
     title: "Author"
-    # improved: "not to dumb it down" was clunky; this captures the
-    # spirit of the book (relatable and written to be read, not tolerated)
     body: >
       I wrote A Biologist's Guide to Computing — available free online.
       Written to be genuinely readable for biologists: the goal was always
       that it would be picked up and finished, not just bookmarked.
     link_text: "Read the book →"
-    # [FLAG] confirm this URL is correct
-    link_url: "http://book.biologistsguide2computing.com/"
+    link_url: "https://book.biologistsguide2computing.com/"
 
   knowledge_transfer:
     title: "Knowledge transfer"
-    # reordered: leads with KT (the principle), then mentions courses
-    # as evidence — per the interview, teaching is evidence of KT,
-    # not the other way around
     body: >
       Knowledge transfer is built into every project I deliver —
       documentation, onboarding, and time spent making sure the work
@@ -272,9 +262,6 @@ depth_signals:
 
   eu:
     title: "EU Horizon participant"
-    # [FLAG] "Registered EU Horizon PIC holder" was not verified in our
-    # session — restore it here if accurate, otherwise the current
-    # wording is the safer claim
     body: >
       Named as data management partner on an active EU Horizon project.
       I understand the data management and governance expectations that
