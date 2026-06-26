@@ -155,7 +155,16 @@ testimonials:
   heading: "I've worked with some good people over the years. Here's what a few of them said."
 
   items:
-    # confirmed real — recently obtained from Alicia Showering, BugBiome
+    - quote: >
+        Tjelvar was an absolute pleasure to work with. He was flexible,
+        responsive, and consistently willing to go the extra mile, even when it
+        meant working beyond the original scope of the project. His support
+        throughout our starch breakdown image analysis project was invaluable,
+        and the final solution has created real value for both Provar and our
+        clients. I would not hesitate to work with him again and highly recommend
+        his services.
+      name: "Tristan Dorfling"
+      role: "CEO, Provar"
     - quote: >
         Tjelvar understood our biology as well as the software. He built
         analysis tools we can run and maintain ourselves. Everything was
@@ -163,10 +172,6 @@ testimonials:
         when the team needs to keep using it without him in the room.
       name: "Alicia Showering"
       role: "CEO & Co-founder, BugBiome"
-
-    # [FLAG] permission given for the old image analysis page — recommend
-    # a brief message confirming they are happy with use on this
-    # differently-positioned site before publishing
     - quote: >
         Tjelvar has experience in working with people from a variety of
         backgrounds, which helps him to quickly understand the core data
@@ -174,16 +179,6 @@ testimonials:
         very highly.
       name: "Prof Lars Pastewka"
       role: "Group Leader, University of Freiburg"
-
-    # [FLAG] same re-permission note as above
-    - quote: >
-        Tjelvar is friendly, very capable and dependable. He has an
-        excellent understanding of the demands of biologists and has
-        helped me and my lab members on numerous occasions with finding
-        creative solutions to safely store and retrieve our data
-        cost-efficiently.
-      name: "Dr Brande Wulff"
-      role: "Group Leader, John Innes Centre"
 
 about:
   label: "About"
