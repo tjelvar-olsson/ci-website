@@ -261,6 +261,8 @@ depth_signals:
       Named as data management partner on an active EU Horizon project.
       I understand the data management and governance expectations that
       come with European research funding.
+    link_text: "Project website →"
+    link_url: "https://sheepheatit.eu/"
 
 contact:
   label: "Contact"
